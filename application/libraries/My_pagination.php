@@ -36,7 +36,7 @@
  * @link        http://draco-003.com/blog/
  */
  
-class MY_Pagination extends CI_Pagination {
+class My_pagination extends CI_Pagination {
      
     // declare the disabled class open tags from bootstrap
     var $prev_tag_open_disabled = '<li class="previous disabled">';
