@@ -17,12 +17,6 @@ class Drugs extends MY_Model {
      */
     public $drug_name_en;
     
-    /**
-     * Item Name in Farsi.
-     * @var string
-     */
-    public $drug_name_fa;
-    
     /*
      * category of Item
      * @var string

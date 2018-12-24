@@ -4,7 +4,7 @@ if($xrays)
   echo "<div class='table-responsive'><table class='table table-bordered table-striped'><thead><tr>
            <th>ID</th>
            <th>Name</th>
-           <th>نام فارسی</th>
+           <th>Category</th>
            <th>Unit Price</th>
            <th>QTY</th>
            <th></th>
@@ -15,7 +15,7 @@ if($xrays)
     echo '<tr id="'.$xray->xray_id.'" title="'.$xray->memo.'">'.
       '<td>'.html_escape($xray->xray_id).'</td>'.
       '<td>'.html_escape($xray->xray_name_en).'</td>'.
-      '<td>'.html_escape($xray->xray_name_fa).'</td>'.
+      '<td>'.html_escape($xray->category).'</td>'.
       '<td>'.html_escape($xray->price).'</td>'.
       '<td><input type="number" name="no_of_item" value="1"/></td>'.
       '<td class="hidden-print">'.$actions.'</td>'.

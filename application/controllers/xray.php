@@ -56,7 +56,7 @@ class Xray extends CI_Controller {
     {
         $this->load->model('xrays');
         $q=$this->input->post('q');
-        $xrays=$this->xrays->search(array('xray_name_en'=>$q,'xray_name_fa'=>$q));
+        $xrays=$this->xrays->search(array('xray_name_en'=>$q));
         $data['xrays']=$xrays;
         $this->load->view('xray/result',$data);
         return TRUE;
@@ -84,7 +84,6 @@ class Xray extends CI_Controller {
     {
       $this->form_validation->set_rules(array(
         array( 'field' => 'xray_name_en', 'label' => 'Xray Name in English', 'rules' => 'required|trim|has_no_schar', ),
-        array( 'field' => 'xray_name_fa', 'label' => 'Xray Name in Dari', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'catagory', 'label' => 'Category', 'rules' => 'trim|has_no_schar', ),
         array( 'field' => 'price', 'label' => 'Price', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'memo', 'label' => 'Memo', 'rules' => 'trim', ),
@@ -195,7 +194,6 @@ class Xray extends CI_Controller {
     {
       $this->form_validation->set_rules(array(
         array( 'field' => 'xray_name_en', 'label' => 'Xray Name in English', 'rules' => 'required|trim|has_no_schar', ),
-        array( 'field' => 'xray_name_fa', 'label' => 'Xray Name in Dari', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'catagory', 'label' => 'Category', 'rules' => 'trim|has_no_schar', ),
         array( 'field' => 'price', 'label' => 'Price', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'memo', 'label' => 'Memo', 'rules' => 'trim', ),
@@ -264,7 +262,7 @@ class Xray extends CI_Controller {
         
         echo '<tr id="dpi'.$this->xray_patient->xray_patient_id.'"><td class="id"></td>'.
             '<td>'.$this->xrays->xray_name_en.'</td>'.
-            '<td>'.$this->xrays->xray_name_fa.'</td>'.
+            '<td>'.$this->xrays->category.'</td>'.
             '<td>'.$this->xrays->price.'</td>'.
             '<td>'.$this->xray_patient->no_of_item.'</td>'.
             '<td>'.$this->xray_patient->total_cost.'</td>'.

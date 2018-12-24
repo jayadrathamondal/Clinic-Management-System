@@ -73,7 +73,6 @@ CREATE TABLE IF NOT EXISTS `comments` (
 CREATE TABLE IF NOT EXISTS `drugs` (
   `drug_id` int(11) NOT NULL AUTO_INCREMENT,
   `drug_name_en` varchar(50) DEFAULT NULL,
-  `drug_name_fa` varchar(50) DEFAULT NULL,
   `category` varchar(50) DEFAULT NULL,
   `price` decimal(10,0) NOT NULL,
   `num` int(11) NOT NULL DEFAULT '0',
@@ -147,7 +146,6 @@ INSERT INTO `groups` (`group_id`, `name`, `description`, `roles`) VALUES
 CREATE TABLE IF NOT EXISTS `lab` (
   `test_id` int(11) NOT NULL AUTO_INCREMENT,
   `test_name_en` varchar(50) DEFAULT NULL,
-  `test_name_fa` varchar(50) DEFAULT NULL,
   `category` varchar(50) DEFAULT NULL,
   `price` decimal(10,0) NOT NULL,
   `memo` text,
@@ -385,7 +383,6 @@ CREATE TABLE IF NOT EXISTS `user_group` (
 CREATE TABLE IF NOT EXISTS `xrays` (
   `xray_id` int(11) NOT NULL AUTO_INCREMENT,
   `xray_name_en` varchar(50) DEFAULT NULL,
-  `xray_name_fa` varchar(50) DEFAULT NULL,
   `category` varchar(50) DEFAULT NULL,
   `price` decimal(10,0) NOT NULL,
   `memo` text,

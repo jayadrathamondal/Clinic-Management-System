@@ -81,7 +81,7 @@
       <tr>
           <th>#</th>
           <th>Name</th>
-          <th>نام</th>
+          <th>Category</th>
           <th>UPrice</th>
           <th>QTY</th>
           <th>Total Cost</th>
@@ -97,7 +97,7 @@
         $this->xrays->load($xray->xray_id);
         echo '<tr id="dpi'.$xray->xray_patient_id.'"><td class="id">'.++$i.'</td>'.
             '<td>'.$this->xrays->xray_name_en.'</td>'.
-            '<td>'.$this->xrays->xray_name_fa.'</td>'.
+            '<td>'.$this->xrays->category.'</td>'.
             '<td>'.$this->xrays->price.'</td>'.
             '<td>'.$xray->no_of_item.'</td>'.
             '<td>'.$xray->total_cost.'</td>';

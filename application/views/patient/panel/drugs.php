@@ -77,7 +77,7 @@
       <tr>
           <th>#</th>
           <th>Name</th>
-          <th>نام</th>
+          <th>Category</th>
           <th>UPrice</th>
           <th>QTY</th>
           <th>Total Cost</th>
@@ -93,7 +93,7 @@
         $this->drugs->load($drug->drug_id);
         echo '<tr id="dpi'.$drug->drug_patient_id.'"><td class="id">'.++$i.'</td>'.
             '<td>'.$this->drugs->drug_name_en.'</td>'.
-            '<td>'.$this->drugs->drug_name_fa.'</td>'.
+            '<td>'.$this->drugs->category.'</td>'.
             '<td>'.$this->drugs->price.'</td>'.
             '<td>'.$drug->no_of_item.'</td>'.
             '<td>'.$drug->total_cost.'</td>';

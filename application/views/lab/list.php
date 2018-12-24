@@ -5,7 +5,7 @@ if($tests)
   echo "<div>".$pagination."<div class='table-responsive'><table id='drug_list_table' class='table table-bordered table-striped'><thead><tr>
            <th>ID</th>
            <th>Name</th>
-           <th>نام فارسی</th>
+           <th>Category</th>
            <th>Unit Price</th>
            <th>Memo</th>
            <th></th>
@@ -25,7 +25,7 @@ if($tests)
         echo '<tr id="test'.$test->test_id.'" title="'.$test->memo.'">'.
           '<td>'.html_escape($test->test_id).'</td>'.
           '<td>'.html_escape($test->test_name_en).'</td>'.
-          '<td>'.html_escape($test->test_name_fa).'</td>'.
+          '<td>'.html_escape($test->category).'</td>'.
           '<td>'.html_escape($test->price).'</td>'.
           '<td>'.html_escape(character_limiter($test->memo, 50,'...')).'</td>'.
           '<td class="hidden-print">'.$actions.'</td>'.

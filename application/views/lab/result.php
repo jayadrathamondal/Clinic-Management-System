@@ -4,7 +4,7 @@ if($lab)
   echo "<div class='table-responsive'><table class='table table-bordered table-striped'><thead><tr>
            <th>ID</th>
            <th>Name</th>
-           <th>نام فارسی</th>
+           <th>Category</th>
            <th>Unit Price</th>
            <th>QTY</th>
            <th></th>
@@ -15,7 +15,7 @@ if($lab)
     echo '<tr id="'.$test->test_id.'" title="'.$test->memo.'">'.
       '<td>'.html_escape($test->test_id).'</td>'.
       '<td>'.html_escape($test->test_name_en).'</td>'.
-      '<td>'.html_escape($test->test_name_fa).'</td>'.
+      '<td>'.html_escape($test->category).'</td>'.
       '<td>'.html_escape($test->price).'</td>'.
       '<td><input type="number" name="no_of_item" value="1"/></td>'.
       '<td class="hidden-print">'.$actions.'</td>'.

@@ -77,7 +77,7 @@
       <tr>
           <th>#</th>
           <th>Name</th>
-          <th>نام</th>
+          <th>Category</th>
           <th>UPrice</th>
           <th>QTY</th>
           <th>Total Cost</th>
@@ -93,7 +93,7 @@
         $this->lab->load($test->test_id);
         echo '<tr id="dpi'.$test->lab_patient_id.'"><td class="id">'.++$i.'</td>'.
             '<td>'.$this->lab->test_name_en.'</td>'.
-            '<td>'.$this->lab->test_name_fa.'</td>'.
+            '<td>'.$this->lab->category.'</td>'.
             '<td>'.$this->lab->price.'</td>'.
             '<td>'.$test->no_of_item.'</td>'.
             '<td>'.$test->total_cost.'</td>';

@@ -17,12 +17,6 @@ class Lab extends MY_Model {
      */
     public $test_name_en;
     
-    /**
-     * Item Name in Farsi.
-     * @var string
-     */
-    public $test_name_fa;
-    
     /*
      * category of item
      * @var string

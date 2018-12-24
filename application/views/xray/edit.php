@@ -7,8 +7,7 @@
         <div>
           <?php echo ( !empty($error) ? $error : '' ); ?>
           <div class="form-group">
-              <div class="col-md-6"><input type="text" name='xray_name_en' id="xray_name_en" value="<?php echo set_value('xray_name_en', $xray->xray_name_en);?>" class='form-control' placeholder='Xray Name' title='Xray Name' required autofocus /></div>
-            <div class="col-md-6"><input type="text" name='xray_name_fa' id='xray_name_fa' value="<?php echo set_value('xray_name_fa', $xray->xray_name_fa);?>" class='form-control' placeholder='نام اکسری' title='نام اکسری' required /></div>
+              <div class="col-md-12"><input type="text" name='xray_name_en' id="xray_name_en" value="<?php echo set_value('xray_name_en', $xray->xray_name_en);?>" class='form-control' placeholder='Xray Name' title='Xray Name' required autofocus /></div>
           </div>
           <div class="form-group">
             <div class="col-md-6"><input type="text" name='category' id='category' value="<?php echo set_value('category', $xray->category);?>" class='form-control' placeholder='Category' title='Category' /></div>

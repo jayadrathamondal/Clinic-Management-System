@@ -17,12 +17,6 @@ class Xrays extends MY_Model {
      */
     public $xray_name_en;
     
-    /**
-     * Item Name in Farsi.
-     * @var string
-     */
-    public $xray_name_fa;
-    
     /*
      * category of item
      * @var string

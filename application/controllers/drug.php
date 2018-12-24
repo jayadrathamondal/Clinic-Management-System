@@ -68,7 +68,7 @@ class Drug extends CI_Controller {
     {
         $this->load->model('drugs');
         $q=$this->input->post('q');
-        $drugs=$this->drugs->search(array('drug_name_en'=>$q,'drug_name_fa'=>$q));
+        $drugs=$this->drugs->search(array('drug_name_en'=>$q));
         $data['drugs']=$drugs;
         $this->load->view('drug/result',$data);
         return TRUE;
@@ -99,7 +99,6 @@ class Drug extends CI_Controller {
     {
       $this->form_validation->set_rules(array(
         array( 'field' => 'drug_name_en', 'label' => 'Drug Name in English', 'rules' => 'required|trim|has_no_schar', ),
-        array( 'field' => 'drug_name_fa', 'label' => 'Drug Name in Dari', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'catagory', 'label' => 'Category', 'rules' => 'trim|has_no_schar', ),
         array( 'field' => 'price', 'label' => 'Price', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'memo', 'label' => 'Memo', 'rules' => 'trim', ),
@@ -225,7 +224,6 @@ class Drug extends CI_Controller {
     {
       $this->form_validation->set_rules(array(
         array( 'field' => 'drug_name_en', 'label' => 'Drug Name in English', 'rules' => 'required|trim|has_no_schar', ),
-        array( 'field' => 'drug_name_fa', 'label' => 'Drug Name in Dari', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'catagory', 'label' => 'Category', 'rules' => 'trim|has_no_schar', ),
         array( 'field' => 'price', 'label' => 'Price', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'memo', 'label' => 'Memo', 'rules' => 'trim', ),
@@ -298,7 +296,7 @@ class Drug extends CI_Controller {
         
         echo '<tr id="dpi'.$this->drug_patient->drug_patient_id.'"><td class="id"></td>'.
             '<td>'.$this->drugs->drug_name_en.'</td>'.
-            '<td>'.$this->drugs->drug_name_fa.'</td>'.
+            '<td>'.$this->drugs->category.'</td>'.
             '<td>'.$this->drugs->price.'</td>'.
             '<td>'.$this->drug_patient->no_of_item.'</td>'.
             '<td>'.$this->drug_patient->total_cost.'</td>'.
@@ -590,7 +588,7 @@ class Drug extends CI_Controller {
     $drugs_list['']='';
     foreach ($drugs as $drug) 
     {
-      $drugs_list[$drug->drug_id]=  html_escape($drug->drug_name_fa.', '.$drug->drug_name_en.', '.$drug->price);
+      $drugs_list[$drug->drug_id]=  html_escape($drug->drug_name_en.', '.$drug->category.', '.$drug->price);
     }
     return $drugs_list;
   }

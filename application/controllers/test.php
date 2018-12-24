@@ -57,7 +57,7 @@ class Test extends CI_Controller {
     {
         $this->load->model('lab');
         $q=$this->input->post('q');
-        $lab=$this->lab->search(array('lab_name_en'=>$q,'lab_name_fa'=>$q));
+        $lab=$this->lab->search(array('lab_name_en'=>$q));
         $data['lab']=$lab;
         $this->load->view('lab/result',$data);
         return TRUE;
@@ -85,7 +85,6 @@ class Test extends CI_Controller {
     {
       $this->form_validation->set_rules(array(
         array( 'field' => 'test_name_en', 'label' => 'Test Name in English', 'rules' => 'required|trim|has_no_schar', ),
-        array( 'field' => 'test_name_fa', 'label' => 'Test Name in Dari', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'catagory', 'label' => 'Category', 'rules' => 'trim|has_no_schar', ),
         array( 'field' => 'price', 'label' => 'Price', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'memo', 'label' => 'Memo', 'rules' => 'trim', ),
@@ -200,7 +199,6 @@ class Test extends CI_Controller {
     {
       $this->form_validation->set_rules(array(
         array( 'field' => 'test_name_en', 'label' => 'Test Name in English', 'rules' => 'required|trim|has_no_schar', ),
-        array( 'field' => 'test_name_fa', 'label' => 'Test Name in Dari', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'catagory', 'label' => 'Category', 'rules' => 'trim|has_no_schar', ),
         array( 'field' => 'price', 'label' => 'Price', 'rules' => 'required|trim|has_no_schar', ),
         array( 'field' => 'memo', 'label' => 'Memo', 'rules' => 'trim', ),
@@ -269,7 +267,7 @@ class Test extends CI_Controller {
         
         echo '<tr id="dpi'.$this->lab_patient->lab_patient_id.'"><td class="id"></td>'.
             '<td>'.$this->lab->test_name_en.'</td>'.
-            '<td>'.$this->lab->test_name_fa.'</td>'.
+            '<td>'.$this->lab->category.'</td>'.
             '<td>'.$this->lab->price.'</td>'.
             '<td>'.$this->lab_patient->no_of_item.'</td>'.
             '<td>'.$this->lab_patient->total_cost.'</td>'.
