@@ -450,10 +450,11 @@ class Patient extends CI_Controller {
    */
   public function _id_type_options()
   {
-    return array('Tazkara'=>'Tazkara',
+    return array('PAN Card'=>'PAN Card',
+                 'Voter ID'=>'Voter ID',
                  'Passport'=>'Passport',
-                 'Driver License'=>'Driver License',
-                 'Bank ID Card'=>'Bank ID Card', );
+                 'Aadhar'=>'Aadhar',
+                 'Driving License'=>'Driving License', );
   }
   
   /**
