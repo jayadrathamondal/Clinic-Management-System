@@ -57,7 +57,7 @@ class Test extends CI_Controller {
     {
         $this->load->model('lab');
         $q=$this->input->post('q');
-        $lab=$this->lab->search(array('lab_name_en'=>$q));
+        $lab=$this->lab->search(array('test_name_en'=>$q));
         $data['lab']=$lab;
         $this->load->view('lab/result',$data);
         return TRUE;
